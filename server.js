@@ -20,10 +20,7 @@ app.set('view engine','ejs')
 //   res.header("Access to all URL's origins","*")
 // })
 
-app.use(cors({
-  origin:'*',
-  methods:['post','get','put']
-}))
+app.use(cors());
 app.use(express.json())  //parse the data
 app.get('/' , (req,res)=>{
     res.send('welcome page')
